@@ -40,6 +40,7 @@ const { role, company, date, description, color } = Astro.props;
         gap: 1.5rem;
         position: relative;
         padding-bottom: 2.5rem;
+        width: 100%;
     }
 
     .timeline-indicator {
@@ -66,8 +67,8 @@ const { role, company, date, description, color } = Astro.props;
         background: linear-gradient(
             to bottom,
             #EAECEF 0%,
-            #18191c20 80%,
-            transparent 100%
+            #9CA3AF 40%,
+            #232529 100%
         );
     }
 
@@ -102,5 +103,6 @@ const { role, company, date, description, color } = Astro.props;
     .description {
         margin: 0.75rem 0 0 0;
         line-height: 1.6;
+        width: 60%;
     }
 </style>

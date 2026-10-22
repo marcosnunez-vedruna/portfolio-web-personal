@@ -1,11 +1,27 @@
 ---
 import SectionTitle from '../components/SectionTitle.astro';
 
+import JobCard from '../components/JobCard.astro';
+
+import jobsData from '../data/jobs.json';
 ---
 
 <section id="experience" class="experience">
     <SectionTitle number="03" title="Experiencie" />
 
+    <div class="jobs">
+        {jobsData.map((job) => (
+            <div class="card">
+                <JobCard
+                    role={job.role}
+                    company={job.company}
+                    date={job.date}
+                    description={job.description}
+                    color={job.color}
+                />
+            </div>
+        ))}
+    </div>
 </section>
 
 <style>
@@ -16,5 +32,12 @@ import SectionTitle from '../components/SectionTitle.astro';
         padding: 1rem 0;
         display: flex;
         flex-direction: column;
+    }
+
+    .jobs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2rem;
     }
 </style>
