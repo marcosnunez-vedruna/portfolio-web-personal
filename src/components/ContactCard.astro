@@ -1,0 +1,250 @@
+---
+
+---
+
+<div class="card">
+
+    <!-- Formas -->
+    <div class="shapes">
+        <span class="shape green-triangle" />
+        <span class="shape red-circle" />
+        <span class="shape blue-triangle" />
+        <span class="shape yellow-circle" />
+    </div>
+
+    <!-- Cara frontal -->
+    <div class="card-side card-front">
+        <div class="main-info">
+            <h3 class="name">
+                <span class="surname">Núñez Curiel</span>
+                <span class="firstname">Marcos</span>
+            </h3>
+            <p class="role">&lt;WEB DEVELOPER /&gt;</p>
+        </div>
+
+        <ul class="contact-list">
+            <li>
+                <img src="src/assests/iconos-contacto/icono-telefono.png" alt="icono-telefono">
+                <p>+34 656 64 95 16</p>
+            </li>
+            <li>
+                <img src="src/assests/iconos-contacto/icono-github.png" alt="icono-github">
+                <p>https://github.com/marcosnunezcuriel</p>
+            </li>
+            <li>
+                <img src="src/assests/iconos-contacto/icono-gmail.png" alt="icono-gmail">
+                <p>marcosnunezcuriel@gmail.com</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Cara trasera -->
+    <div class="card-side card-back">
+        <div class="back-content">
+            <p class="heading">Abierto a</p>
+            <p class="highlight red">nuevas oportunidades</p>
+            <p class="highlight yellow">colaboraciones</p>
+            <p class="highlight blue">proyectos interesantes</p>
+            <p class="highlight green">nuevos retos</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        position: relative;
+        width: 100%;
+        max-width: 440px;
+        height: 260px;
+        margin: 2rem auto;
+        background-color: #EAECEF;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .card:hover .card-front {
+        opacity: 0;
+    }
+
+    .card:hover .card-back {
+        opacity: 1;
+    }
+
+    .card-side {
+        position: absolute;
+        inset: 0;
+        padding: 1.8rem 2rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        backface-visibility: hidden;
+        transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+        z-index: 2;
+    }
+
+    /* Formas */
+    .shapes {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .shape {
+        position: absolute;
+        transition: all 0.6s ease;
+    }
+
+    .green-triangle {
+        top: -85px;
+        left: -85px;
+        width: 130px;
+        height: 130px;
+        background-color: #9AE6B4;
+        transform: rotate(45deg);
+    }
+
+    .card:hover .green-triangle {
+        left: 380px;
+    }
+
+    .red-circle {
+        border-radius: 50%;
+        top: -120px;
+        right: -120px;
+        width: 250px;
+        height: 250px;
+        background-color: #FEB2B2;
+    }
+
+    .card:hover .red-circle {
+        right: 300px;
+    }
+
+    .blue-triangle {
+        bottom: -150px;
+        left: -150px;
+        width: 250px;
+        height: 250px;
+        background-color: #90CDF4;
+        transform: rotate(45deg);
+    }
+
+    .card:hover .blue-triangle {
+        left: 350px;
+    }
+
+    .yellow-circle {
+        border-radius: 50%;
+        bottom: -60px;
+        right: -60px;
+        width: 130px;
+        height: 130px;
+        background-color: #F6E05E;
+    }
+
+    .card:hover .yellow-circle {
+        right: 375px;
+    }
+
+    /* Cara frontal */
+    .card-front {
+        opacity: 1;
+        color: #232529;
+    }
+
+    .main-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1
+    }
+
+    .surname {
+        font-size: 1.35rem;
+        font-style: italic;
+        font-weight: 800;
+    }
+
+    .firstname {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    .role {
+        margin: 0.3rem 0 0 0;
+        font-size: 0.85rem;
+        color: #9CA3AF;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .contact-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .contact-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .contact-list img {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .contact-list p {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: 700
+    }
+
+    /* Cara trasera */
+    .card-back {
+        opacity: 0;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+        margin-right: 40px;
+    }
+
+    .back-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading {
+        margin: 0 0 0.2rem 0;
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #232529;
+    }
+
+    .highlight {
+        margin: 0.1rem 0;
+        font-size: 0.95rem;
+        font-weight: 800;
+    }
+
+    .yellow { color: #F6E05E; }
+    .red    { color: #FEB2B2; }
+    .green  { color: #9AE6B4; }
+    .blue   { color: #90CDF4; }
+</style>
