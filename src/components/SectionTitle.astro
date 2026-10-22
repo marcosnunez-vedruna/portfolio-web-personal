@@ -1,0 +1,43 @@
+---
+interface Props {
+  number: string;
+  title: string;
+}
+
+const { number, title } = Astro.props;
+---
+<div class="title">
+    <span>{number}</span>
+    <h2>{title}</h2>
+    <div class="linea-decorativa"></div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    .title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem 0;
+        width: 100%;
+    }
+
+    .title span {
+        color: #F6E05E;
+        font-family: "Press Start 2P";
+        font-size: 1.25rem;
+    }
+
+    .title h2 {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .linea-decorativa {
+        flex: 1;
+        height: 1px;
+        background-color: #F6E05E;
+    }
+</style>
