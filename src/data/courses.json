@@ -5,7 +5,7 @@
     "platform": "Udemy",
     "year": "2025",
     "color": "yellow",
-    "certificateUrl": "https://www.udemy.com/certificate/UC-372f8b6e-b3a3-4237-a30a-94174bbcbcfb/"
+    "certificateUrl": "public/studies/certificado-curso-html-y-css.pdf"
   },
   {
     "id": "javascript",
@@ -13,7 +13,7 @@
     "platform": "Udemy",
     "year": "2026",
     "color": "red",
-    "certificateUrl": "https://www.udemy.com/certificate/UC-8abd851b-8647-4339-bdaf-0abba556a839/"
+    "certificateUrl": "public/studies/certificado-curso-javaScript.pdf"
   },
   {
     "id": "sql",
@@ -29,7 +29,7 @@
     "platform": "Randstad",
     "year": "2026",
     "color": "blue",
-    "certificateUrl": ""
+    "certificateUrl": "public/studies/diploma-prl-generico.pdf"
   },
   {
     "id": "prl-mozo-almacen",
@@ -37,7 +37,7 @@
     "platform": "Randstad",
     "year": "2026",
     "color": "blue",
-    "certificateUrl": ""
+    "certificateUrl": "public/studies/diploma-prl-mozo-de-almacen.pdf"
   },
   {
     "id": "prl-auxiliar-linea",
@@ -45,7 +45,7 @@
     "platform": "Randstad",
     "year": "2026",
     "color": "blue",
-    "certificateUrl": ""
+    "certificateUrl": "public/studies/diploma-prl-auxiliar-de-linea.pdf"
   },
   {
     "id": "prl-sector-alimenticio",
@@ -53,7 +53,7 @@
     "platform": "Randstad",
     "year": "2026",
     "color": "blue",
-    "certificateUrl": ""
+    "certificateUrl": "public/studies/diploma-prl-sector-alimentacion.pdf"
   },
   {
     "id": "prl-sector-quimico",
@@ -61,7 +61,7 @@
     "platform": "Randstad",
     "year": "2026",
     "color": "blue",
-    "certificateUrl": ""
+    "certificateUrl": "public/studies/diploma-prl-sector-quimico.pdf"
   },
   {
     "id": "carretilla-frontal",
