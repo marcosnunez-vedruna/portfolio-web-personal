@@ -1,0 +1,53 @@
+---
+interface Props {
+  language: string;
+  level: string;
+  flag: string;
+  color: string; // yellow, red, green, blue
+}
+
+const { language, level, flag, color } = Astro.props;
+---
+
+<div class={`card ${color}`}>
+  <img src={flag} alt={`Bandera de ${language}`} class="flag" />
+  <div class="content">
+    <span class="level">{level}</span>
+    <h3 class="language-name">{language}</h3>
+  </div>
+</div>
+
+<style>
+    .yellow { --card-color: #F6E05E; }
+    .red    { --card-color: #FEB2B2; }
+    .green  { --card-color: #9AE6B4; }
+    .blue   { --card-color: #90CDF4; }
+
+    .card {
+        background-color: #383B42;
+        border: 1px solid var(--card-color);
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        transition: transform 0.2s ease;
+    }
+
+    .flag {
+        width: 65px;
+        height: 42px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+
+    .level {
+        color: var(--card-color);
+    }
+</style>
