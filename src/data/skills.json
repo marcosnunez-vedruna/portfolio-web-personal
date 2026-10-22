@@ -1,0 +1,112 @@
+[
+  {
+    "category": "Lenguajes de programación y marcado",
+    "skills": [
+      {
+        "id": "java",
+        "name": "Java",
+        "icon": "/src/assests/skills/java.png"
+      },
+      {
+        "id": "html5",
+        "name": "HTML5",
+        "icon": "/src/assests/skills/html5.png"
+      },
+      {
+        "id": "css3",
+        "name": "CSS3",
+        "icon": "/src/assests/skills/css3.png"
+      },
+      {
+        "id": "javascript",
+        "name": "JavaScript",
+        "icon": "/src/assests/skills/javascript.png"
+      },
+      {
+        "id": "sql",
+        "name": "SQL",
+        "icon": "/src/assests/skills/sql.png"
+      }
+    ]
+  },
+  {
+    "category": "Frameworks",
+    "skills": [
+      {
+        "id": "springboot",
+        "name": "SpringBoot",
+        "icon": "/src/assests/skills/springboot.png"
+      },
+      {
+        "id": "angular",
+        "name": "Angular",
+        "icon": "/src/assests/skills/angular.png"
+      },
+      {
+        "id": "react",
+        "name": "React",
+        "icon": "/src/assests/skills/react.png"
+      },
+      {
+        "id": "astro",
+        "name": "Astro",
+        "icon": "/src/assests/skills/astro.png"
+      }
+    ]
+  },
+  {
+    "category": "Bases de datos",
+    "skills": [
+      {
+        "id": "mysql",
+        "name": "MySQL",
+        "icon": "/src/assests/skills/mysql.png"
+      }
+    ]
+  },
+  {
+    "category": "Diseño & Prototipado",
+    "skills": [
+      {
+        "id": "figma",
+        "name": "Figma",
+        "icon": "/src/assests/skills/figma.png"
+      }
+    ]
+  },
+  {
+    "category": "Herramientas & IDEs",
+    "skills": [
+      {
+        "id": "git",
+        "name": "Git",
+        "icon": "/src/assests/skills/git.png"
+      },
+      {
+        "id": "github",
+        "name": "GitHub",
+        "icon": "/src/assests/skills/github.png"
+      },
+      {
+        "id": "git-bash",
+        "name": "Git Bash",
+        "icon": "/src/assests/skills/git-bash.png"
+      },
+      {
+        "id": "intellij-idea",
+        "name": "IntelliJ IDEA",
+        "icon": "/src/assests/skills/intellij-idea.png"
+      },
+      {
+        "id": "eclipse",
+        "name": "Eclipse",
+        "icon": "/src/assests/skills/eclipse.png"
+      },
+      {
+        "id": "vs-code",
+        "name": "VS Code",
+        "icon": "/src/assests/skills/vs-code.png"
+      }
+    ]
+  }
+]

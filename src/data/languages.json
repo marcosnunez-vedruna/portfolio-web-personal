@@ -1,0 +1,20 @@
+[
+  {
+    "id": "es",
+    "language": "Español",
+    "level": "Nativo",
+    "flag": "/src/assests/flags/spain-flag.jpg"
+  },
+  {
+    "id": "en",
+    "language": "Inglés",
+    "level": "B2 · Cambridge",
+    "flag": "/src/assests/flags/uk-flag.jpg"
+  },
+  {
+    "id": "it",
+    "language": "Italiano",
+    "level": "Básico",
+    "flag": "/src/assests/flags/italy-flag.jpg"
+  }
+]
