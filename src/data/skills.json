@@ -5,31 +5,31 @@
       {
         "id": "java",
         "name": "Java",
-        "icon": "/src/assests/skills/java.png",
+        "icon": "/src/assests/skills/icono-java.png",
         "color": "blue"
       },
       {
         "id": "html5",
         "name": "HTML5",
-        "icon": "/src/assests/skills/html5.png",
+        "icon": "/src/assests/skills/icono-html5.png",
         "color": "red"
       },
       {
         "id": "css3",
         "name": "CSS3",
-        "icon": "/src/assests/skills/css3.png",
+        "icon": "/src/assests/skills/icono-css3.png",
         "color": "blue"
       },
       {
         "id": "javascript",
         "name": "JavaScript",
-        "icon": "/src/assests/skills/javascript.png",
+        "icon": "/src/assests/skills/icono-javascript.png",
         "color": "yellow"
       },
       {
         "id": "sql",
         "name": "SQL",
-        "icon": "/src/assests/skills/sql.png",
+        "icon": "/src/assests/skills/icono-sql.png",
         "color": "green"
       }
     ]
@@ -40,25 +40,25 @@
       {
         "id": "springboot",
         "name": "SpringBoot",
-        "icon": "/src/assests/skills/springboot.png",
+        "icon": "/src/assests/skills/icono-springboot.png",
         "color": "green"
       },
       {
         "id": "angular",
         "name": "Angular",
-        "icon": "/src/assests/skills/angular.png",
+        "icon": "/src/assests/skills/icono-angular.png",
         "color": "red"
       },
       {
         "id": "react",
         "name": "React",
-        "icon": "/src/assests/skills/react.png",
+        "icon": "/src/assests/skills/icono-react.png",
         "color": "blue"
       },
       {
         "id": "astro",
         "name": "Astro",
-        "icon": "/src/assests/skills/astro.png",
+        "icon": "/src/assests/skills/icono-astro.png",
         "color": "yellow"
       }
     ]
@@ -69,7 +69,7 @@
       {
         "id": "mysql",
         "name": "MySQL",
-        "icon": "/src/assests/skills/mysql.png",
+        "icon": "/src/assests/skills/icono-mysql.png",
         "color": "blue"
       }
     ]
@@ -80,7 +80,7 @@
       {
         "id": "figma",
         "name": "Figma",
-        "icon": "/src/assests/skills/figma.png",
+        "icon": "/src/assests/skills/icono-figma.png",
         "color": "green"
       }
     ]
@@ -91,37 +91,37 @@
       {
         "id": "git",
         "name": "Git",
-        "icon": "/src/assests/skills/git.png",
+        "icon": "/src/assests/skills/icono-git.png",
         "color": "red"
       },
       {
         "id": "github",
         "name": "GitHub",
-        "icon": "/src/assests/skills/github.png",
+        "icon": "/src/assests/skills/icono-github.png",
         "color": "yellow"
       },
       {
         "id": "git-bash",
         "name": "Git Bash",
-        "icon": "/src/assests/skills/git-bash.png",
+        "icon": "/src/assests/skills/icono-git-bash.png",
         "color": "green"
       },
       {
         "id": "intellij-idea",
         "name": "IntelliJ IDEA",
-        "icon": "/src/assests/skills/intellij-idea.png",
+        "icon": "/src/assests/skills/icono-intellij-idea.png",
         "color": "yellow"
       },
       {
         "id": "eclipse",
         "name": "Eclipse",
-        "icon": "/src/assests/skills/eclipse.png",
+        "icon": "/src/assests/skills/icono-eclipse.png",
         "color": "red"
       },
       {
         "id": "vs-code",
         "name": "VS Code",
-        "icon": "/src/assests/skills/vs-code.png",
+        "icon": "/src/assests/skills/icono-vs-code.png",
         "color": "blue"
       }
     ]

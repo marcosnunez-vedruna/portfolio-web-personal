@@ -10,7 +10,7 @@ interface Props {
 const { title, platform, year, certificateURL, color } = Astro.props;
 ---
 
-<a href={certificateURL} class={`card ${color}`}>
+<a href={certificateURL} target="_blank" class={`card ${color}`}>
   <div class="card-left">
     <span class="diamond">◆</span>
     <div class="info">
@@ -34,7 +34,7 @@ const { title, platform, year, certificateURL, color } = Astro.props;
         border-radius: 12px;
         padding: 1.25rem 1.5rem;
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: space-between;
         gap: 1rem;
         transition: all 0.3s ease;
@@ -42,6 +42,7 @@ const { title, platform, year, certificateURL, color } = Astro.props;
         box-sizing: border-box;
         text-decoration: none;
         color: inherit;
+        width: 100%;
     }
 
     .card:hover {
@@ -51,7 +52,7 @@ const { title, platform, year, certificateURL, color } = Astro.props;
 
     .card-left {
         display: flex;
-        align-items: center;
+        align-items: start;
         gap: 1rem;
     }
 
@@ -84,6 +85,8 @@ const { title, platform, year, certificateURL, color } = Astro.props;
     }
 
     .arrow-icon {
+        position: relative;
+        top: -10px;
         color: #383B42;
         font-size: 1.4rem;
         font-weight: 700;
