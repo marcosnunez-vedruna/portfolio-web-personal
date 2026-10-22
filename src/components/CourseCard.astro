@@ -1,0 +1,99 @@
+---
+interface Props {
+  title: string;
+  platform: string;
+  year: string;
+  certificateURL: string;
+  color: string; // 'yellow', 'red', 'green', 'blue'
+}
+
+const { title, platform, year, certificateURL, color } = Astro.props;
+---
+
+<a href={certificateURL} class={`card ${color}`}>
+  <div class="card-left">
+    <span class="diamond">◆</span>
+    <div class="info">
+      <h4 class="title">{title}</h4>
+      <p class="subtitle">{platform} · {year}</p>
+    </div>
+  </div>
+
+  <span class="arrow-icon">↗</span>
+</a>
+
+<style>
+    .yellow { --card-color: #F6E05E; --bg-grey-color: #B2AFA0; }
+    .red    { --card-color: #FEB2B2; --bg-grey-color: #B8A8A8; }
+    .green  { --card-color: #9AE6B4; --bg-grey-color: #A1AD9F; }
+    .blue   { --card-color: #90CDF4; --bg-grey-color: #9EA8B3; }
+
+    .card {
+        background-color: #383B42;
+        border: 1px solid var(--card-color);
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card:hover {
+        background-color: var(--bg-grey-color);
+        border: 1px solid #18191C;
+    }
+
+    .card-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .diamond {
+        color: var(--card-color);
+        font-size: 1rem;
+    }
+
+    .card:hover .diamond {
+        color: #383B42;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .title {
+        margin: 0;
+    }
+
+    .subtitle {
+        color: #9CA3AF;
+        margin: 0;
+    }
+
+    .card:hover .title, .card:hover .subtitle {
+        color: #383B42;
+    }
+
+    .arrow-icon {
+        color: #383B42;
+        font-size: 1.4rem;
+        font-weight: 700;
+        opacity: 0;
+        transform: translate(-4px, 4px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .card:hover .arrow-icon {
+        opacity: 1;
+    }
+    
+</style>

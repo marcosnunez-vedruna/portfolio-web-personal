@@ -3,90 +3,120 @@
     "id": "html5-css3",
     "title": "HTML5 y CSS3",
     "platform": "Udemy",
-    "year": "2025"
+    "year": "2025",
+    "color": "yellow",
+    "certificateUrl": ""
   },
   {
     "id": "javascript",
     "title": "JavaScript",
     "platform": "Udemy",
-    "year": "2026"
+    "year": "2026",
+    "color": "red",
+    "certificateUrl": ""
   },
   {
     "id": "sql",
     "title": "SQL",
     "platform": "Udemy",
-    "year": "2026"
+    "year": "2026",
+    "color": "green",
+    "certificateUrl": ""
   },
   {
     "id": "prl-generico",
     "title": "P.R.L. Genérico",
     "platform": "Randstad",
-    "year": "2026"
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": ""
   },
   {
     "id": "prl-mozo-almacen",
     "title": "P.R.L. Mozo de Almacén",
     "platform": "Randstad",
-    "year": "2026"
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": ""
   },
   {
     "id": "prl-auxiliar-linea",
     "title": "P.R.L. Auxiliar de línea",
     "platform": "Randstad",
-    "year": "2026"
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": ""
   },
   {
     "id": "prl-sector-alimenticio",
     "title": "P.R.L. Sector alimenticio",
     "platform": "Randstad",
-    "year": "2026"
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": ""
   },
   {
     "id": "prl-sector-quimico",
     "title": "P.R.L. Sector químico",
     "platform": "Randstad",
-    "year": "2026"
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": ""
   },
   {
     "id": "carretilla-frontal",
     "title": "Carretilla frontal",
     "platform": "Fadecom",
-    "year": "2026"
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
   },
   {
     "id": "transpaleta-electrica",
     "title": "Transpaleta eléctrica",
     "platform": "Fadecom",
-    "year": "2026"
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
   },
   {
     "id": "carretilla-lateral",
     "title": "Carretilla lateral",
     "platform": "Fadecom",
-    "year": "2026"
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
   },
   {
     "id": "carretilla-recoge-pedidos",
     "title": "Carretilla Recoge Pedidos",
     "platform": "Fadecom",
-    "year": "2026"
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
   },
   {
     "id": "carretilla-apilador",
     "title": "Carretilla Apilador",
     "platform": "Fadecom",
-    "year": "2026"
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
   },
   {
     "id": "manipulador-alimentos",
     "title": "Manipulador de alimentos",
     "platform": "Fadecom",
-    "year": "2026"
+    "year": "2026",
+    "color": "red",
+    "certificateUrl": ""
   },
   {
     "id": "control-alergenos",
     "title": "Control de alérgenos",
     "platform": "Fadecom",
-    "year": "2026"
+    "year": "2026",
+    "color": "red",
+    "certificateUrl": ""
   }
 ]
