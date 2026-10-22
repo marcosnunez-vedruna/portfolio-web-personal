@@ -1,0 +1,35 @@
+---
+// src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+    <img src="src\assests\logo-mnc.png" alt="logo-mnc" class="logo" />
+    <span>© {currentYear} • Marcos Núñez Curiel • Web Developer • Sevilla, España</span>
+    <span>Mi Portfolio</span>
+</footer>
+
+<style>
+  .footer {
+    width: 100%;
+    background-color: #18191C;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+
+  .footer span {
+    color: #9CA3AF;
+    font-size: 1rem;
+    font-weight: 200;
+  }
+
+</style>
