@@ -1,0 +1,106 @@
+---
+interface Props {
+  role: string;
+  company: string;
+  date: string;
+  description: string;
+  color: string; // yellow, red, green, blue
+}
+
+const { role, company, date, description, color } = Astro.props;
+---
+
+<article class={`card ${color}`}>
+  <div class="timeline-indicator">
+    <span class="dot"></span>
+    <div class="line"></div>
+  </div>
+
+  <div class="content">
+    <header class="header">
+      <div class="titles">
+        <h3 class="role">{role}</h3>
+        <p class="company">{company}</p>
+      </div>
+      <span class="date">{date}</span>
+    </header>
+
+    <p class="description">{description}</p>
+  </div>
+</article>
+
+<style>
+    .yellow { --card-color: #F6E05E; }
+    .red    { --card-color: #FEB2B2; }
+    .green  { --card-color: #9AE6B4; }
+    .blue   { --card-color: #90CDF4; }
+
+    .card {
+        display: flex;
+        gap: 1.5rem;
+        position: relative;
+        padding-bottom: 2.5rem;
+    }
+
+    .timeline-indicator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        width: 12px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        background-color: var(--card-color);
+        border-radius: 50%;
+        margin-top: 0.35rem;
+        z-index: 1;
+    }
+
+    .line {
+        width: 2px;
+        flex-grow: 1;
+        margin-top: 0.4rem;
+        background: linear-gradient(
+            to bottom,
+            #EAECEF 0%,
+            #18191c20 80%,
+            transparent 100%
+        );
+    }
+
+    .content {
+        flex-grow: 1;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .role {
+        margin: 0;
+    }
+
+    .company {
+        margin: 0.2rem 0 0 0;
+        color: var(--card-color);
+        font-style: italic;
+        font-weight: 600;
+    }
+
+    .date {
+        color: #9CA3AF;
+        white-space: nowrap;
+    }
+
+    .description {
+        margin: 0.75rem 0 0 0;
+        line-height: 1.6;
+    }
+</style>
