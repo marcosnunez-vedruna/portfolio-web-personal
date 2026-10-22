@@ -7,7 +7,7 @@ interface Props {
 const { number, title } = Astro.props;
 ---
 <div class="title">
-    <span>{number}</span>
+    <span class="number">{number}</span>
     <h2>{title}</h2>
     <div class="linea-decorativa"></div>
 </div>
@@ -22,10 +22,10 @@ const { number, title } = Astro.props;
         width: 100%;
     }
 
-    .title span {
+    .number {
         color: #F6E05E;
         font-family: "Press Start 2P";
-        font-size: 1.25rem;
+        font-size: 0.65rem;
     }
 
     .title h2 {
