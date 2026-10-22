@@ -1,0 +1,29 @@
+---
+import SectionTitle from '../components/SectionTitle.astro';
+import ContactCard from '../components/ContactCard.astro';
+
+---
+
+<section id="contact" class="contact">
+    <SectionTitle number="04" title="Contact" />
+
+    <h1>Trabajemos juntos</h1>
+
+    <ContactCard />
+</section>
+
+<style>
+    .contact {
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        align-self: center;
+        font-style: italic;
+    }
+</style>
