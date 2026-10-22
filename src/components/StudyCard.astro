@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  institution: string;
+  location: string;
+  color: string; // yellow, red, green, blue
+}
+
+const { title, date, institution, location, color } = Astro.props;
+---
+
+<div class={`card ${color}`}>
+  <span class="date">{date}</span>
+  <h3 class="title">{title}</h3>
+  <div class="footer-info">
+    <p class="institution">{institution}</p>
+    <p class="location">📍 {location}</p>
+  </div>
+</div>
+
+<style>
+    .yellow { --card-color: #F6E05E; }
+    .red    { --card-color: #FEB2B2; }
+    .green  { --card-color: #9AE6B4; }
+    .blue   { --card-color: #90CDF4; }
+
+    .card {
+        background-color: #383B42;
+        border: 1px solid var(--card-color);
+        border-radius: 12px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.5rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .date {
+        color: var(--card-color);
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        color: #9CA3AF;
+    }
+</style>
