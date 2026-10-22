@@ -6,7 +6,7 @@
         <img src="src\assests\logo-mnc.png" alt="MNC - Marcos Núñez Curiel" class="logo" />
     </a>
 
-    <ul class="nav-links">
+    <ul class="sections">
         <li><a href="#about" class="active">Sobre mí</a></li>
         <li><a href="#education">Educación</a></li>
         <li><a href="#experience">Experiencia</a></li>
@@ -34,7 +34,7 @@
         display: block;
     }
 
-    .nav-links {
+    .sections {
         display: flex;
         gap: 2.5rem;
         list-style: none;
@@ -42,7 +42,7 @@
         padding: 0;
     }
 
-    .nav-links a {
+    .sections a {
         color: #EAECEF;
         text-decoration: none;
         font-size: 1rem;
@@ -52,16 +52,47 @@
         transition: color 0.2s ease;
     }
 
-    .nav-links a:hover {
+    .sections a:hover {
         color: #F6E05E;
         border-bottom-color: #F6E05E;
     }
 
-    .nav-links a.active {
+    .sections a.active {
         border-bottom: 1px solid #EAECEF;
     }
 
-    .nav-links a.active:hover {
+    .sections a.active:hover {
         border-bottom-color: #F6E05E;
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.sections a');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    
+                    navLinks.forEach((link) => {
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach((section) => observer.observe(section));
+    });
+</script>
