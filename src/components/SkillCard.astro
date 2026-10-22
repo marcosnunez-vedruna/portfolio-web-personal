@@ -1,0 +1,76 @@
+---
+interface Props {
+  name: string;
+  icon: string;
+  color: string; // yellow, red, green, blue
+}
+
+const { name, icon, color } = Astro.props;
+---
+
+<div class={`card ${color}`}>
+  <div class="icon-wrapper">
+    <img src={icon} alt={name} class="icon" />
+  </div>
+  <span class="name">{name}</span>
+</div>
+
+<style>
+    .yellow { --card-color: #F6E05E; }
+    .red    { --card-color: #FEB2B2; }
+    .green  { --card-color: #9AE6B4; }
+    .blue   { --card-color: #90CDF4; }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 90px;
+    }
+
+    .icon-wrapper {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 2px solid var(--card-color);
+        background-color: #383B42;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover .icon-wrapper {
+        box-shadow: 0 0 15px #EAECEF;
+    }
+
+    .icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    .card:hover .icon {
+        opacity: 1;
+    }
+
+    .name {
+        text-align: center;
+        border: 1px solid var(--card-color);
+        border-radius: 12px;
+        padding: 0.15rem 0.6rem;
+        background-color: #383B42;
+        white-space: nowrap;
+        transform: translateY(-15px);
+    }
+
+    .card:hover .name {
+        box-shadow: 0 0 15px #EAECEF;
+    }
+
+</style>
