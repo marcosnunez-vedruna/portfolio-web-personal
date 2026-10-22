@@ -1,0 +1,68 @@
+---
+---
+
+<nav class="navbar">
+  <a href="#" class="logo-link">
+    <img src="src\assests\logo-mnc.png" alt="MNC - Marcos Núñez Curiel" class="logo" />
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#sobre-mi" class="active">Sobre mí</a></li>
+    <li><a href="#educacion">Educación</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<style>
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #18191C;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 4rem;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        height: 45px;
+        width: auto;
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        color: #EAECEF;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 200;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+        transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: #F6E05E;
+        border-bottom-color: #F6E05E;
+    }
+
+    .nav-links a.active {
+        border-bottom: 1px solid #EAECEF;
+    }
+
+    .nav-links a.active:hover {
+        border-bottom-color: #F6E05E;
+    }
+</style>
