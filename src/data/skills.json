@@ -27,6 +27,12 @@
         "color": "yellow"
       },
       {
+        "id": "typescript",
+        "name": "TypeScript",
+        "icon": "/src/assests/skills/icono-typescript.png",
+        "color": "blue"
+      },
+      {
         "id": "sql",
         "name": "SQL",
         "icon": "/src/assests/skills/icono-sql.png",
