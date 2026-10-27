@@ -9,10 +9,10 @@ const { name, icon, color } = Astro.props;
 ---
 
 <div class={`card ${color}`}>
-  <div class="icon-wrapper">
-    <img src={icon} alt={name} class="icon" />
-  </div>
-  <span class="name">{name}</span>
+    <div class="icon-wrapper">
+        <img src={icon} alt={name} class="icon" />
+    </div>
+    <span class="name">{name}</span>
 </div>
 
 <style>
@@ -25,26 +25,27 @@ const { name, icon, color } = Astro.props;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
-        width: 90px;
+        width: 100px;
+        position: relative;
+        overflow: hidden;
     }
 
     .icon-wrapper {
-        width: 120px;
-        height: 120px;
+        width: 95px;
+        height: 95px;
         border-radius: 50%;
         border: 2px solid var(--card-color);
         background-color: #383B42;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 12px;
+        padding: 14px;
         box-sizing: border-box;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.25s ease;
     }
 
     .card:hover .icon-wrapper {
-        box-shadow: 0 0 15px #EAECEF;
+        box-shadow: 0 0 12px #EAECEF;
     }
 
     .icon {
@@ -52,7 +53,7 @@ const { name, icon, color } = Astro.props;
         height: 100%;
         object-fit: contain;
         opacity: 0.8;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.25s ease;
     }
 
     .card:hover .icon {
@@ -61,16 +62,20 @@ const { name, icon, color } = Astro.props;
 
     .name {
         text-align: center;
+        font-size: 0.82rem;
+        font-weight: 600;
         border: 1px solid var(--card-color);
         border-radius: 50px;
-        padding: 1rem 1.5rem;
+        padding: 0.25rem 0.75rem;
         background-color: #383B42;
         white-space: nowrap;
-        transform: translateY(-15px);
+        margin-top: -14px;
+        z-index: 2;
+        transition: box-shadow 0.25s ease;
     }
 
     .card:hover .name {
-        box-shadow: 0 0 15px #EAECEF;
+        box-shadow: 0 0 12px #EAECEF;
     }
 
 </style>
