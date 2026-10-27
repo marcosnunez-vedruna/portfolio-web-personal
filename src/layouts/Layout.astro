@@ -1,6 +1,10 @@
 ---
 import { getRootColourVariables } from '../utils/colours.js';
-const rootVars = getRootColourVariables();
+import { getRootFontVariables } from '../utils/fonts.js';
+const rootVars = {
+  ...getRootColourVariables(),
+  ...getRootFontVariables()
+};
 ---
 <!doctype html>
 <html lang="en">
