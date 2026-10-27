@@ -1,4 +1,6 @@
 ---
+import { getCardColorStyles } from '../utils/colours.js';
+
 interface Props {
   role: string;
   company: string;
@@ -8,9 +10,10 @@ interface Props {
 }
 
 const { role, company, date, description, color } = Astro.props;
+const cardStyles = getCardColorStyles(color);
 ---
 
-<article class={`card ${color}`}>
+<article class="card" style={cardStyles}>
   <div class="timeline-indicator">
     <span class="dot"></span>
     <div class="line"></div>
@@ -30,10 +33,6 @@ const { role, company, date, description, color } = Astro.props;
 </article>
 
 <style>
-    .yellow { --card-color: #F6E05E; }
-    .red    { --card-color: #FEB2B2; }
-    .green  { --card-color: #9AE6B4; }
-    .blue   { --card-color: #90CDF4; }
 
     .card {
         display: flex;

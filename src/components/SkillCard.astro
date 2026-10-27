@@ -1,4 +1,6 @@
 ---
+import { getCardColorStyles } from '../utils/colours.js';
+
 interface Props {
   name: string;
   icon: string;
@@ -6,9 +8,10 @@ interface Props {
 }
 
 const { name, icon, color } = Astro.props;
+const cardStyles = getCardColorStyles(color);
 ---
 
-<div class={`card ${color}`}>
+<div class="card" style={cardStyles}>
     <div class="icon-wrapper">
         <img src={icon} alt={name} class="icon" />
     </div>
@@ -16,10 +19,6 @@ const { name, icon, color } = Astro.props;
 </div>
 
 <style>
-    .yellow { --card-color: #F6E05E; }
-    .red    { --card-color: #FEB2B2; }
-    .green  { --card-color: #9AE6B4; }
-    .blue   { --card-color: #90CDF4; }
 
     .card {
         display: flex;

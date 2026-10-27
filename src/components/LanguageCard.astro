@@ -1,4 +1,6 @@
 ---
+import { getCardColorStyles } from '../utils/colours.js';
+
 interface Props {
   language: string;
   level: string;
@@ -7,9 +9,10 @@ interface Props {
 }
 
 const { language, level, flag, color } = Astro.props;
+const cardStyles = getCardColorStyles(color);
 ---
 
-<div class={`card ${color}`}>
+<div class="card" style={cardStyles}>
   <img src={flag} alt={`Bandera de ${language}`} class="flag" />
   <div class="content">
     <span class="level">{level}</span>
@@ -18,10 +21,6 @@ const { language, level, flag, color } = Astro.props;
 </div>
 
 <style>
-    .yellow { --card-color: #F6E05E; }
-    .red    { --card-color: #FEB2B2; }
-    .green  { --card-color: #9AE6B4; }
-    .blue   { --card-color: #90CDF4; }
 
     .card {
         background-color: #383B42;

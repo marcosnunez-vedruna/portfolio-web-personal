@@ -1,4 +1,6 @@
 ---
+import { getCardColorStyles } from '../utils/colours.js';
+
 interface Props {
   title: string;
   platform: string;
@@ -8,9 +10,10 @@ interface Props {
 }
 
 const { title, platform, year, certificateURL, color } = Astro.props;
+const cardStyles = getCardColorStyles(color);
 ---
 
-<a href={certificateURL} target="_blank" class={`card ${color}`}>
+<a href={certificateURL} target="_blank" class="card" style={cardStyles}`}>
   <div class="card-left">
     <span class="diamond">◆</span>
     <div class="info">
@@ -23,10 +26,6 @@ const { title, platform, year, certificateURL, color } = Astro.props;
 </a>
 
 <style>
-    .yellow { --card-color: #F6E05E; --bg-grey-color: #B2AFA0; }
-    .red    { --card-color: #FEB2B2; --bg-grey-color: #B8A8A8; }
-    .green  { --card-color: #9AE6B4; --bg-grey-color: #A1AD9F; }
-    .blue   { --card-color: #90CDF4; --bg-grey-color: #9EA8B3; }
 
     .card {
         background-color: #383B42;
