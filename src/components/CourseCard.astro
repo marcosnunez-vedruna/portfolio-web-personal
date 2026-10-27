@@ -1,6 +1,4 @@
 ---
-import { getCardColorStyles } from '../utils/colours.js';
-
 interface Props {
   title: string;
   platform: string;
@@ -10,10 +8,9 @@ interface Props {
 }
 
 const { title, platform, year, certificateURL, color } = Astro.props;
-const cardStyles = getCardColorStyles(color);
 ---
 
-<a href={certificateURL} target="_blank" class="card" style={cardStyles}`}>
+<a href={certificateURL} target="_blank" class="card" style={`--card-color: var(--color-${color}); --bg-grey-color: var(--color-${color}-bg);`}>
   <div class="card-left">
     <span class="diamond">◆</span>
     <div class="info">
@@ -28,7 +25,7 @@ const cardStyles = getCardColorStyles(color);
 <style>
 
     .card {
-        background-color: #383B42;
+        background-color: var(--light-bg);
         border: 1px solid var(--card-color);
         border-radius: 12px;
         padding: 1.25rem 1.5rem;
@@ -46,7 +43,7 @@ const cardStyles = getCardColorStyles(color);
 
     .card:hover {
         background-color: var(--bg-grey-color);
-        border: 1px solid #18191C;
+        border: 1px solid var(--dark-bg);
     }
 
     .card-left {
@@ -61,7 +58,7 @@ const cardStyles = getCardColorStyles(color);
     }
 
     .card:hover .diamond {
-        color: #383B42;
+        color: var(--light-bg);
     }
 
     .info {
@@ -75,18 +72,18 @@ const cardStyles = getCardColorStyles(color);
     }
 
     .subtitle {
-        color: #9CA3AF;
+        color: var(--grey-text);
         margin: 0;
     }
 
     .card:hover .title, .card:hover .subtitle {
-        color: #383B42;
+        color: var(--light-bg);
     }
 
     .arrow-icon {
         position: relative;
         top: -10px;
-        color: #383B42;
+        color: var(--light-bg);
         font-size: 1.4rem;
         font-weight: 700;
         opacity: 0;

@@ -1,6 +1,4 @@
 ---
-import { getCardColorStyles } from '../utils/colours.js';
-
 interface Props {
   role: string;
   company: string;
@@ -10,10 +8,9 @@ interface Props {
 }
 
 const { role, company, date, description, color } = Astro.props;
-const cardStyles = getCardColorStyles(color);
 ---
 
-<article class="card" style={cardStyles}>
+<article class="card" style={`--card-color: var(--color-${color});`}>
   <div class="timeline-indicator">
     <span class="dot"></span>
     <div class="line"></div>
@@ -65,9 +62,9 @@ const cardStyles = getCardColorStyles(color);
         margin-top: 0.4rem;
         background: linear-gradient(
             to bottom,
-            #EAECEF 0%,
-            #9CA3AF 40%,
-            #232529 100%
+            var(--white-text); 0%,
+            var(--grey-text); 40%,
+            var(--normal-bg); 100%
         );
     }
 
@@ -95,7 +92,7 @@ const cardStyles = getCardColorStyles(color);
     }
 
     .date {
-        color: #9CA3AF;
+        color: var(--grey-text);;
         white-space: nowrap;
     }
 

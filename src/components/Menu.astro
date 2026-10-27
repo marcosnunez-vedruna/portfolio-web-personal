@@ -20,7 +20,7 @@
         top: 0;
         width: 100%;
         z-index: 1000;
-        background-color: #18191C;
+        background-color: var(--dark-bg);;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -43,7 +43,7 @@
     }
 
     .sections a {
-        color: #EAECEF;
+        color: inherit;
         text-decoration: none;
         font-size: 1.05rem;
         font-weight: 300;
@@ -54,16 +54,16 @@
     }
 
     .sections a:hover {
-        color: #F6E05E;
-        border-bottom-color: #F6E05E;
+        color: var(--color-yellow);
+        border-bottom-color: var(--color-yellow);;
     }
 
     .sections a.active {
-        border-bottom: 2px solid #EAECEF;
+        border-bottom: 2px solid var(--white-text);;
     }
 
     .sections a.active:hover {
-        border-bottom-color: #F6E05E;
+        border-bottom-color: var(--color-yellow);;
     }
 </style>
 
@@ -72,7 +72,7 @@
     const navLinks = document.querySelectorAll('.sections a');
     const sections = document.querySelectorAll('section[id]');
 
-    // 1. Manejo del click para scroll suave restando la altura del header sticky
+    // Manejo del click para scroll suave restando la altura del header sticky
     navLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
@@ -97,7 +97,7 @@
         });
     });
 
-    // 2. IntersectionObserver para resaltar la sección activa al hacer scroll
+    // IntersectionObserver para resaltar la sección activa al hacer scroll
     const observerOptions = {
         root: null,
         rootMargin: '-20% 0px -60% 0px',

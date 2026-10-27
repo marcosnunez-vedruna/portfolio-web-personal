@@ -1,6 +1,4 @@
 ---
-import { getCardColorStyles } from '../utils/colours.js';
-
 interface Props {
   title: string;
   date: string;
@@ -10,10 +8,9 @@ interface Props {
 }
 
 const { title, date, institution, location, color } = Astro.props;
-const cardStyles = getCardColorStyles(color);
 ---
 
-<div class="card" style={cardStyles}>
+<div class="card" style={`--card-color: var(--color-${color});`}>
     <div class="top-content">
         <span class="date">{date}</span>
         <h3 class="title">{title}</h3>
@@ -27,7 +24,7 @@ const cardStyles = getCardColorStyles(color);
 <style>
 
     .card {
-        background-color: #383B42;
+        background-color: var(--light-bg);
         border: 1px solid var(--card-color);
         border-radius: 12px;
         padding: 1.75rem 2rem;
@@ -64,7 +61,7 @@ const cardStyles = getCardColorStyles(color);
         display: flex;
         flex-direction: column;
         gap: 0.35rem;
-        color: #9CA3AF;
+        color: var(--grey-text);
         font-size: 0.95rem;
     }
 

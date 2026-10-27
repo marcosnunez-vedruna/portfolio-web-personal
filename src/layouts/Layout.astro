@@ -1,3 +1,7 @@
+---
+import { getRootColourVariables } from '../utils/colours.js';
+const rootVars = getRootColourVariables();
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,43 +10,17 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>MNC - Portfolio</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global define:vars={rootVars}>
 	body {
-		background-color: #232529;
-		color: #EAECEF;
+		background-color: var(--normal-bg);
+		color: var(--white-text);
 		margin: 0;
   	}
-
-  	/* Encabezados */
-	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 700;
-		margin: 0;
-	}
-
-	h2 {
-		font-size: 80px;
-	}
-
-	h3 {
-		font-size: 60px;
-	}
-
-	h4 {
-		font-size: 40px;
-	}
-
-	/* Párrafos y textos comunes */
-	p, span, li, a {
-		font-family: 'Inter', system-ui, sans-serif;
-		font-weight: 400;
-		font-size: 30px;
-	}
 </style>
