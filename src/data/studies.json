@@ -1,5 +1,21 @@
 [
   {
+    "id": "ingenieria-informatica",
+    "title": "Ingeniería Informática",
+    "date": "Septiembre 2028 - Junio 2031",
+    "institution": "Universidad Nacional de Educación a Distancia (UNED)",
+    "location": "Sevilla, España",
+    "color": "green"
+  },
+  {
+    "id": "dam",
+    "title": "Técnico Superior en\nDesarrollo de Aplicaciones Multiplataforma",
+    "date": "Septiembre 2027 - Junio 2028",
+    "institution": "C.D.P. Santa Joaquina de Vedruna",
+    "location": "Sevilla, España",
+    "color": "blue"
+  },
+  {
     "id": "daw",
     "title": "Técnico Superior en\nDesarrollo de Aplicaciones Web",
     "date": "Septiembre 2025 - Junio 2027",

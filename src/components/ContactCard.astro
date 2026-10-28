@@ -1,89 +1,104 @@
 ---
-
 ---
 
-<div class="card">
+<div class="card" id="card">
+    <div class="card-inner">
+        <!-- Cara frontal -->
+        <div class="card-side card-front">
+            <!-- Formas Cara Frontal -->
+            <div class="shapes">
+                <span class="shape green-shape"></span>
+                <span class="shape red-shape"></span>
+                <span class="shape blue-shape"></span>
+                <span class="shape yellow-shape"></span>
+            </div>
 
-    <!-- Formas -->
-    <div class="shapes">
-        <span class="shape green-triangle" />
-        <span class="shape red-circle" />
-        <span class="shape blue-triangle" />
-        <span class="shape yellow-circle" />
-    </div>
+            <div class="main-info">
+                <h3 class="name">
+                    <span class="surname">Núñez Curiel</span>
+                    <span class="firstname">Marcos</span>
+                </h3>
+                <p class="role">&lt;WEB DEVELOPER /&gt;</p>
+            </div>
 
-    <!-- Cara frontal -->
-    <div class="card-side card-front">
-        <div class="main-info">
-            <h3 class="name">
-                <span class="surname">Núñez Curiel</span>
-                <span class="firstname">Marcos</span>
-            </h3>
-            <p class="role">&lt;WEB DEVELOPER /&gt;</p>
+            <ul class="contact-list">
+                <li>
+                    <img src="src/assests/iconos-contacto/icono-telefono.png" alt="icono-telefono">
+                    <p>+34 656 64 95 16</p>
+                </li>
+                <li>
+                    <img src="src/assests/iconos-contacto/icono-github.png" alt="icono-github">
+                    <p>https://github.com/marcosnunezcuriel</p>
+                </li>
+                <li>
+                    <img src="src/assests/iconos-contacto/icono-gmail.png" alt="icono-gmail">
+                    <p>marcosnunezcuriel@gmail.com</p>
+                </li>
+            </ul>
         </div>
 
-        <ul class="contact-list">
-            <li>
-                <img src="src/assests/iconos-contacto/icono-telefono.png" alt="icono-telefono">
-                <p>+34 656 64 95 16</p>
-            </li>
-            <li>
-                <img src="src/assests/iconos-contacto/icono-github.png" alt="icono-github">
-                <p>https://github.com/marcosnunezcuriel</p>
-            </li>
-            <li>
-                <img src="src/assests/iconos-contacto/icono-gmail.png" alt="icono-gmail">
-                <p>marcosnunezcuriel@gmail.com</p>
-            </li>
-        </ul>
-    </div>
+        <!-- Cara trasera -->
+        <div class="card-side card-back">
+            <!-- Formas Cara Trasera -->
+            <div class="shapes">
+                <span class="shape red-shape"></span>
+                <span class="shape green-shape"></span>
+                <span class="shape yellow-shape"></span>
+                <span class="shape blue-shape"></span>
+            </div>
 
-    <!-- Cara trasera -->
-    <div class="card-side card-back">
-        <div class="back-content">
-            <p class="heading">Abierto a</p>
-            <p class="highlight red">nuevas oportunidades</p>
-            <p class="highlight yellow">colaboraciones</p>
-            <p class="highlight blue">proyectos interesantes</p>
-            <p class="highlight green">nuevos retos</p>
+            <div class="back-content">
+                <p class="heading">Abierto a</p>
+                <p class="highlight red">nuevas oportunidades</p>
+                <p class="highlight yellow">colaboraciones</p>
+                <p class="highlight blue">proyectos interesantes</p>
+                <p class="highlight green">nuevos retos</p>
+            </div>
         </div>
     </div>
 </div>
 
 <style>
     .card {
-        position: relative;
         width: 100%;
         max-width: 440px;
         height: 260px;
         margin: 2rem auto;
-        background-color: var(--white-text);
-        overflow: hidden;
+        perspective: 1000px;
         cursor: pointer;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
-    .card:hover .card-front {
-        opacity: 0;
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        border-radius: 6px;
     }
 
-    .card:hover .card-back {
-        opacity: 1;
+    .card.is-flipped .card-inner,
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
     }
 
     .card-side {
         position: absolute;
         inset: 0;
-        padding: 1.8rem 2rem;
+        padding: 2rem 2.2rem;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         backface-visibility: hidden;
-        transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
-        z-index: 2;
+        background-color: #f2f2f2;
+        border-radius: 6px;
+        overflow: hidden;
     }
 
-    /* Formas */
+    /* Formas del fondo */
     .shapes {
         position: absolute;
         top: 0;
@@ -96,105 +111,125 @@
 
     .shape {
         position: absolute;
-        transition: all 0.6s ease;
     }
 
-    .green-triangle {
-        top: -85px;
-        left: -85px;
-        width: 130px;
-        height: 130px;
-        background-color: var(--color-green);
-        transform: rotate(45deg);
+    /* Posicionamiento en esquinas */
+    .shapes .shape:nth-child(1) { top: 0; left: 0; }
+    .shapes .shape:nth-child(2) { top: 0; right: 0; }
+    .shapes .shape:nth-child(3) { bottom: 0; left: 0; }
+    .shapes .shape:nth-child(4) { bottom: 0; right: 0; }
+
+    /* Triángulo Verde */
+    .green-shape {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 75px 75px 0 0;
+        border-color: #a0e8b0 transparent transparent transparent;
+    }
+    .card-back .green-shape {
+        border-width: 0 75px 75px 0;
+        border-color: transparent #a0e8b0 transparent transparent;
     }
 
-    .card:hover .green-triangle {
-        left: 380px;
-    }
-
-    .red-circle {
+    /* Círculo Rojo: Centro exacto en la esquina (260px de tamaño / offset -130px) */
+    .red-shape {
+        width: 260px;
+        height: 260px;
         border-radius: 50%;
-        top: -120px;
-        right: -120px;
-        width: 250px;
-        height: 250px;
-        background-color: var(--color-red);
+        background-color: #ffb3b3;
+        top: -130px !important;
+        right: -130px !important;
+    }
+    .card-back .red-shape {
+        left: -130px !important;
+        right: auto !important;
     }
 
-    .card:hover .red-circle {
-        right: 300px;
+    /* Triángulo Azul */
+    .blue-shape {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 120px 0 0 120px;
+        border-color: transparent transparent transparent #8ecae6;
+    }
+    .card-back .blue-shape {
+        border-width: 0 0 120px 120px;
+        border-color: transparent transparent #8ecae6 transparent;
     }
 
-    .blue-triangle {
-        bottom: -150px;
-        left: -150px;
-        width: 250px;
-        height: 250px;
-        background-color: var(--color-blue);
-        transform: rotate(45deg);
-    }
-
-    .card:hover .blue-triangle {
-        left: 350px;
-    }
-
-    .yellow-circle {
+    /* Círculo Amarillo: Centro exacto en la esquina (160px de tamaño / offset -80px) */
+    .yellow-shape {
+        width: 160px;
+        height: 160px;
         border-radius: 50%;
-        bottom: -60px;
-        right: -60px;
-        width: 130px;
-        height: 130px;
-        background-color: var(--color-yellow);
+        background-color: #fce36a;
+        bottom: -80px !important;
+        right: -80px !important;
+    }
+    .card-back .yellow-shape {
+        left: -80px !important;
+        right: auto !important;
     }
 
-    .card:hover .yellow-circle {
-        right: 375px;
-    }
-
-    /* Cara frontal */
+    /* Contenido */
     .card-front {
-        opacity: 1;
-        color: var(--normal-bg);
+        z-index: 2;
+        color: #2b2b2b;
     }
 
     .main-info {
-        display: flex;
-        flex-direction: column;
+        margin-top: 0.5rem;
+    }
+
+    .main-info,
+    .contact-list,
+    .back-content {
+        position: relative;
+        z-index: 2;
     }
 
     .name {
         margin: 0;
         display: flex;
         flex-direction: column;
-        line-height: 1.1
+        line-height: 1.1;
     }
 
+    /* Grosor del texto reducido */
     .surname {
-        font-size: 1.35rem;
+        font-size: 1.4rem;
         font-style: italic;
-        font-weight: 800;
+        font-weight: 700;
+        color: #222;
     }
 
     .firstname {
-        font-size: 1.5rem;
-        font-weight: 900;
+        font-size: 1.55rem;
+        font-weight: 700;
+        color: #222;
     }
 
     .role {
         margin: 0.3rem 0 0 0;
         font-size: 0.85rem;
-        color: var(--grey-text);
-        font-weight: 600;
+        color: #666;
+        font-weight: 500;
+        font-style: italic;
         letter-spacing: 0.5px;
     }
 
     .contact-list {
         list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 2rem;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-        align-self: center;
-        justify-self: center;
+        gap: 0.45rem;
+        align-self: flex-end;
+        width: 68%;
     }
 
     .contact-list li {
@@ -212,39 +247,52 @@
 
     .contact-list p {
         margin: 0;
-        font-size: 0.8rem;
-        font-weight: 700
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #222;
+        word-break: break-all;
     }
 
-    /* Cara trasera */
+    /* Cara Trasera */
     .card-back {
-        opacity: 0;
+        transform: rotateY(180deg);
         justify-content: center;
         align-items: flex-end;
         text-align: right;
-        margin-right: 40px;
     }
 
     .back-content {
         display: flex;
         flex-direction: column;
+        padding-right: 10px;
+        margin-right: 2rem;
     }
 
     .heading {
         margin: 0 0 0.2rem 0;
         font-size: 1.1rem;
-        font-weight: 800;
-        color: var(--normal-bg);
+        font-weight: 700;
+        color: #222;
     }
 
     .highlight {
-        margin: 0.1rem 0;
+        margin: 0.05rem 0;
         font-size: 0.95rem;
-        font-weight: 800;
+        font-weight: 700;
     }
 
-    .yellow { color: var(--color-yellow); }
-    .red    { color: var(--color-red); }
-    .green  { color: var(--color-green); }
-    .blue   { color: var(--color-blue); }
+    /* Colores */
+    .red    { color: #ff9ebb; }
+    .yellow { color: #f2d849; }
+    .blue   { color: #8ecae6; }
+    .green  { color: #a0e8b0; }
 </style>
+
+<script>
+    const card = document.getElementById('card');
+    if (card) {
+        card.addEventListener('click', () => {
+            card.classList.toggle('is-flipped');
+        });
+    }
+</script>
