@@ -1,21 +1,21 @@
 ---
 interface Props {
-  number: string;
-  title: string;
+    number: string;
+    title: string;
 }
 
 const { number, title } = Astro.props;
 ---
-<div class="title">
+
+<div class="section-title">
     <span class="number">{number}</span>
-    <h2>{title}</h2>
-    <div class="linea-decorativa"></div>
+    <h2 class="name">{title}</h2>
+    <hr class="linea-decorativa" />
 </div>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-    .title {
+    .section-title {
         display: flex;
         align-items: center;
         gap: 2rem;
@@ -25,22 +25,23 @@ const { number, title } = Astro.props;
 
     .number {
         color: var(--color-yellow);
-        font-family: "Press Start 2P";
+        font-family: var(--font-press-start);
         font-weight: 300;
         font-size: 1rem;
     }
 
-    .title h2 {
+    .name {
         text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin: 0;
-        white-space: nowrap;
-        font-size: 3rem;
+        letter-spacing: 0.25rem;
+        font-family: var(--font-montserrat);
+        font-size: 2rem;
     }
 
     .linea-decorativa {
         flex: 1;
-        height: 1px;
+        border: none;
+        height: 2px;
         background-color: var(--color-yellow);
     }
+
 </style>
