@@ -1,298 +1,222 @@
 ---
+
 ---
 
-<div class="card" id="card">
-    <div class="card-inner">
-        <!-- Cara frontal -->
-        <div class="card-side card-front">
-            <!-- Formas Cara Frontal -->
-            <div class="shapes">
-                <span class="shape green-shape"></span>
-                <span class="shape red-shape"></span>
-                <span class="shape blue-shape"></span>
-                <span class="shape yellow-shape"></span>
-            </div>
-
-            <div class="main-info">
-                <h3 class="name">
-                    <span class="surname">Núñez Curiel</span>
-                    <span class="firstname">Marcos</span>
-                </h3>
-                <p class="role">&lt;WEB DEVELOPER /&gt;</p>
-            </div>
-
-            <ul class="contact-list">
-                <li>
-                    <img src="src/assets/iconos-contacto/icono-telefono.png" alt="icono-telefono">
-                    <p>+34 656 64 95 16</p>
-                </li>
-                <li>
-                    <img src="src/assets/iconos-contacto/icono-github.png" alt="icono-github">
-                    <p>https://github.com/marcosnunezcuriel</p>
-                </li>
-                <li>
-                    <img src="src/assets/iconos-contacto/icono-gmail.png" alt="icono-gmail">
-                    <p>marcosnunezcuriel@gmail.com</p>
-                </li>
-            </ul>
+<div id="card" class="card">
+    <div class="shapes">
+        <span class="shape green-shape" />
+        <span class="shape red-shape" />
+        <span class="shape blue-shape" />
+        <span class="shape yelow-shape" />
+    </div>
+    <div class="card-front">
+        <div class="main-info">
+            <h3 class="name">
+                <span>Núñez Curiel</span>
+                <span>Marcos</span>
+            </h3>
+            <span class="role">&lt;WEB DEVELOPER /&gt;</span>
         </div>
-
-        <!-- Cara trasera -->
-        <div class="card-side card-back">
-            <!-- Formas Cara Trasera -->
-            <div class="shapes">
-                <span class="shape red-shape"></span>
-                <span class="shape green-shape"></span>
-                <span class="shape yellow-shape"></span>
-                <span class="shape blue-shape"></span>
-            </div>
-
-            <div class="back-content">
-                <p class="heading">Abierto a</p>
-                <p class="highlight red">nuevas oportunidades</p>
-                <p class="highlight yellow">colaboraciones</p>
-                <p class="highlight blue">proyectos interesantes</p>
-                <p class="highlight green">nuevos retos</p>
-            </div>
+        <ul class="contact-list">
+            <li>
+                <img src="src/assets/iconos-contacto/icono-telefono.png" alt="icono-telefono">
+                <span>+34 656 64 95 16</span>
+            </li>
+            <li>
+                <img src="src/assets/iconos-contacto/icono-gmail.png" alt="icono-gmail">
+                <span>marcosnunezcuriel@gmail.com</span>
+            </li>
+            <li>
+                <img src="src/assets/iconos-contacto/icono-linkedin.png" alt="icono-gmail">
+                <span>www.linkedin.com/in/marcos-nunez-curiel</span>
+            </li>
+            <li>
+                <img src="src/assets/iconos-contacto/icono-github.png" alt="icono-github">
+                <span>https://github.com/marcosnunezcuriel</span>
+            </li>
+        </ul>
+    </div>
+    <div class="card-back">
+        <div class="back-content">
+            <span class="heading">Abierto a</span>
+            <span class="highlight red">nuevas oportunidades</span>
+            <span class="highlight yellow">colaboraciones</span>
+            <span class="highlight blue">proyectos interesantes</span>
+            <span class="highlight green">nuevos retos</span>
         </div>
     </div>
 </div>
 
 <style>
+
     .card {
-        width: 100%;
-        max-width: 440px;
+        width: 440px;
         height: 260px;
-        margin: 2rem auto;
-        perspective: 1000px;
-        cursor: pointer;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-
-    .card-inner {
+        background-color: var(--white-text);
         position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        transform-style: preserve-3d;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-        border-radius: 6px;
-    }
-
-    .card.is-flipped .card-inner,
-    .card:hover .card-inner {
-        transform: rotateY(180deg);
-    }
-
-    .card-side {
-        position: absolute;
-        inset: 0;
-        padding: 2rem 2.2rem;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        backface-visibility: hidden;
-        background-color: #f2f2f2;
-        border-radius: 6px;
+        cursor: pointer;
         overflow: hidden;
     }
 
-    /* Formas del fondo */
-    .shapes {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 1;
-    }
-
+    /* Formas */
     .shape {
         position: absolute;
     }
 
-    /* Posicionamiento en esquinas */
-    .shapes .shape:nth-child(1) { top: 0; left: 0; }
-    .shapes .shape:nth-child(2) { top: 0; right: 0; }
-    .shapes .shape:nth-child(3) { bottom: 0; left: 0; }
-    .shapes .shape:nth-child(4) { bottom: 0; right: 0; }
-
-    /* Triángulo Verde */
     .green-shape {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 75px 75px 0 0;
-        border-color: #a0e8b0 transparent transparent transparent;
-    }
-    .card-back .green-shape {
-        border-width: 0 75px 75px 0;
-        border-color: transparent #a0e8b0 transparent transparent;
+        top: -60px;
+        left: -60px;
+        width: 120px;
+        height: 120px;
+        transform: rotate(45deg);
+        background-color: var(--color-green);
     }
 
-    /* Círculo Rojo: Centro exacto en la esquina (260px de tamaño / offset -130px) */
     .red-shape {
+        top: -130px;
+        right: -130px;
         width: 260px;
         height: 260px;
         border-radius: 50%;
-        background-color: #ffb3b3;
-        top: -130px !important;
-        right: -130px !important;
-    }
-    .card-back .red-shape {
-        left: -130px !important;
-        right: auto !important;
+        background-color: var(--color-red);
     }
 
-    /* Triángulo Azul */
     .blue-shape {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 120px 0 0 120px;
-        border-color: transparent transparent transparent #8ecae6;
-    }
-    .card-back .blue-shape {
-        border-width: 0 0 120px 120px;
-        border-color: transparent transparent #8ecae6 transparent;
+        bottom: -90px;
+        left: -90px;
+        width: 180px;
+        height: 180px;
+        transform: rotate(45deg);
+        background-color: var(--color-blue);
     }
 
-    /* Círculo Amarillo: Centro exacto en la esquina (160px de tamaño / offset -80px) */
-    .yellow-shape {
-        width: 160px;
-        height: 160px;
+    .yelow-shape {
+        bottom: -65px;
+        right: -65px;
+        width: 130px;
+        height: 130px;
         border-radius: 50%;
-        background-color: #fce36a;
-        bottom: -80px !important;
-        right: -80px !important;
-    }
-    .card-back .yellow-shape {
-        left: -80px !important;
-        right: auto !important;
+        background-color: var(--color-yellow);
     }
 
-    /* Contenido */
-    .card-front {
-        z-index: 2;
-        color: #2b2b2b;
-    }
-
+    /* Cara frontal */
     .main-info {
-        margin-top: 0.5rem;
-    }
-
-    .main-info,
-    .contact-list,
-    .back-content {
-        position: relative;
-        z-index: 2;
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .name {
-        margin: 0;
         display: flex;
         flex-direction: column;
-        line-height: 1.1;
-    }
-
-    /* Grosor del texto reducido */
-    .surname {
-        font-size: 1.4rem;
-        font-style: italic;
+        margin: 0;
+        color: var(--dark-bg);
+        font-family: var(--font-montserrat);
+        font-size: 1.5rem;
         font-weight: 700;
-        color: #222;
-    }
-
-    .firstname {
-        font-size: 1.55rem;
-        font-weight: 700;
-        color: #222;
     }
 
     .role {
-        margin: 0.3rem 0 0 0;
-        font-size: 0.85rem;
-        color: #666;
-        font-weight: 500;
+        color: var(--grey-text);
         font-style: italic;
-        letter-spacing: 0.5px;
     }
 
     .contact-list {
         list-style: none;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 2rem;
+        position: absolute;
+        left: 150px;
+        bottom: 10px;
         display: flex;
         flex-direction: column;
-        gap: 0.45rem;
-        align-self: flex-end;
-        width: 68%;
+        gap: 0.5rem;
+        padding: 0;
+        color: var(--dark-bg);
+        font-family: var(--font-inter);
+        font-size: 0.75rem;
     }
 
     .contact-list li {
         display: flex;
         align-items: center;
-        gap: 0.6rem;
+        gap: 0.5rem;
     }
 
     .contact-list img {
         width: 18px;
         height: 18px;
         object-fit: contain;
-        flex-shrink: 0;
     }
 
-    .contact-list p {
-        margin: 0;
-        font-size: 0.78rem;
-        font-weight: 600;
-        color: #222;
-        word-break: break-all;
+    .contact-list span {
+        font-family: var(--font-inter);
+        font-size: 0.75rem;
+        font-weight: 300;
     }
 
-    /* Cara Trasera */
+    /* Cara trasera */
     .card-back {
         transform: rotateY(180deg);
-        justify-content: center;
-        align-items: flex-end;
-        text-align: right;
+        opacity: 0;
     }
 
     .back-content {
+        position: absolute;
+        top: 75px;
+        right: 75px;
         display: flex;
         flex-direction: column;
-        padding-right: 10px;
-        margin-right: 2rem;
+        gap: 0.5rem;
+        font-family: var(--font-inter);
+        font-size: 0.9rem;
     }
 
     .heading {
-        margin: 0 0 0.2rem 0;
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #222;
+        color: var(--dark-bg);
+        font-weight: 500;
+        align-self: flex-end;
     }
 
     .highlight {
-        margin: 0.05rem 0;
-        font-size: 0.95rem;
         font-weight: 700;
+        align-self: flex-end;
     }
 
-    /* Colores */
-    .red    { color: #ff9ebb; }
-    .yellow { color: #f2d849; }
-    .blue   { color: #8ecae6; }
-    .green  { color: #a0e8b0; }
+    .red    { color: var(--color-red); }
+    .yellow { color: var(--color-yellow); }
+    .blue   { color: var(--color-blue); }
+    .green  { color: var(--color-green); }
+
+    /* Efecto giro */
+    .card {
+        perspective: 1000px;
+        transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+
+    .card.is-flipped {
+        transform: rotateY(180deg);
+    }
+
+    .card.is-flipped .card-front {
+        opacity: 0;
+    }
+
+    .card.is-flipped .card-back {
+        opacity: 1;
+    }
+
 </style>
 
 <script>
-    const card = document.getElementById('card');
-    if (card) {
-        card.addEventListener('click', () => {
-            card.classList.toggle('is-flipped');
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const card = document.getElementById("card");
+
+        card?.addEventListener("click", () => {
+            card.classList.toggle("is-flipped");
         });
-    }
+    });
+    
 </script>
