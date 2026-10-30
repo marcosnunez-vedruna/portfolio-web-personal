@@ -1,11 +1,11 @@
 ---
-import SectionTitle from '../components/SectionTitle.astro';
-import ContactCard from '../components/ContactCard.astro';
+import SectionTitle from '../common/SectionTitle.astro';
+import ContactCard from '../cards/ContactCard.astro';
 
 ---
 
 <section id="contact" class="contact">
-    <SectionTitle number="04" title="Contacto" />
+    <SectionTitle number = "06" title="Contacto"/>
 
     <h1>Trabajemos juntos</h1>
 
@@ -13,17 +13,19 @@ import ContactCard from '../components/ContactCard.astro';
 </section>
 
 <style>
+
     .contact {
-        width: 100%;
-        max-width: 80%;
-        margin: 0 auto;
-        padding: 1rem 0;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
     }
 
     h1 {
-        align-self: center;
+        font-family: var(--font-montserrat);
+        font-size: 3.3rem;
         font-style: italic;
+        font-weight: 100;
     }
+
 </style>
