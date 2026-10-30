@@ -1,6 +1,6 @@
 ---
 interface Props {
-  variant: string; // 'full' (80% centrado), 'short' (60% centrado)
+    variant: string; // 'full' (80%), 'short' (60%)
 }
 
 const { variant } = Astro.props;
@@ -9,6 +9,7 @@ const { variant } = Astro.props;
 <hr class={`separator ${variant}`} />
 
 <style>
+
     .separator {
         border: none;
         height: 1px;
@@ -23,4 +24,5 @@ const { variant } = Astro.props;
     .short {
         width: 60vw;
     }
+
 </style>
