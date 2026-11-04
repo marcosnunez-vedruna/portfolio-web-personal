@@ -1,0 +1,113 @@
+---
+import SectionTitle from "../common/SectionTitle.astro";
+import Separator from "../common/Separator.astro";
+
+import StudyCard from "../cards/StudyCard.astro";
+import LanguageCard from "../cards/LanguageCard.astro";
+import CertificationCard from "../cards/CertificationCard.astro";
+import SkillCard from "../cards/SkillCard.astro";
+
+import studiesData from '../../data/studies.json';
+import languagesData from '../../data/languages.json';
+import certificationsData from '../../data/certifications.json';
+import skillsData from '../../data/skills.json';
+---
+
+<section id="education" class="education">
+    <SectionTitle number = "02" title="Educación"/>
+
+    <div class="studies">
+        {studiesData.map((study) => (
+            <StudyCard
+                title={study.title}
+                date={study.date}
+                institution={study.institution}
+                location={study.location}
+                color={study.color}
+            />
+        ))}
+    </div>
+
+    <Separator variant='short' />
+
+    <div class="languages">
+        {languagesData.map((language) => (
+            <LanguageCard
+                language={language.language}
+                level={language.level}
+                flag={language.flag}
+                color={language.color}
+            />
+        ))}
+    </div>
+
+    <Separator variant='short' />
+
+    <div class="certifications">
+        {certificationsData.map((certification) => (
+            <CertificationCard
+                title={certification.title}
+                platform={certification.platform}
+                year={certification.year}
+                certificateURL={certification.certificateUrl}
+                color={certification.color}
+            />
+        ))}
+    </div>
+    
+    <Separator variant='short' />
+
+    <div class="skills">
+        {skillsData.map((skillsGroup) => (
+            <h4 class="skill-category">{skillsGroup.category}</h4>
+            <div class="skills-group">
+                {skillsGroup.skills.map((skill) => (
+                    <SkillCard
+                        name={skill.name}
+                        icon={skill.icon}
+                        color={skill.color}
+                    />
+                ))}
+            </div>
+        ))}
+    </div>
+
+</section>
+
+<style>
+    
+    .studies {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .languages {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .certifications {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .skill-category {
+        font-family: var(--font-montserrat);
+    }
+
+    .skills-group {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 2rem;
+    }
+
+</style>
