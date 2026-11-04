@@ -1,0 +1,170 @@
+[
+  {
+    "id": "html5",
+    "title": "HTML5",
+    "platform": "Udemy",
+    "year": "2025",
+    "color": "red",
+    "certificateUrl": "public/certifications/certificado-curso-html-y-css.pdf"
+  },
+  {
+    "id": "css3",
+    "title": "CSS3",
+    "platform": "Udemy",
+    "year": "2025",
+    "color": "blue",
+    "certificateUrl": "public/certifications/certificado-curso-html-y-css.pdf"
+  },
+  {
+    "id": "javascript",
+    "title": "JavaScript",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": "public/certifications/certificado-curso-javaScript.pdf"
+  },
+  {
+    "id": "typescript",
+    "title": "TypeScript",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": ""
+  },
+  {
+    "id": "react",
+    "title": "React",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": ""
+  },
+  {
+    "id": "sql",
+    "title": "SQL",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "green",
+    "certificateUrl": ""
+  },
+  {
+    "id": "spring-boot",
+    "title": "SpringBoot",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
+  },
+  {
+    "id": "angular",
+    "title": "Angular",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "red",
+    "certificateUrl": ""
+  },
+  {
+    "id": "astro",
+    "title": "Astro",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
+  },
+  {
+    "id": "prl-generico",
+    "title": "P.R.L. Genérico",
+    "platform": "Randstad",
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": "public/certifications/diploma-prl-generico.pdf"
+  },
+  {
+    "id": "prl-mozo-almacen",
+    "title": "P.R.L. Mozo de Almacén",
+    "platform": "Randstad",
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": "public/certifications/diploma-prl-mozo-de-almacen.pdf"
+  },
+  {
+    "id": "prl-auxiliar-linea",
+    "title": "P.R.L. Auxiliar de línea",
+    "platform": "Randstad",
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": "public/certifications/diploma-prl-auxiliar-de-linea.pdf"
+  },
+  {
+    "id": "prl-sector-alimenticio",
+    "title": "P.R.L. Sector alimenticio",
+    "platform": "Randstad",
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": "public/certifications/diploma-prl-sector-alimentacion.pdf"
+  },
+  {
+    "id": "prl-sector-quimico",
+    "title": "P.R.L. Sector químico",
+    "platform": "Randstad",
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": "public/certifications/diploma-prl-sector-quimico.pdf"
+  },
+  {
+    "id": "carretilla-frontal",
+    "title": "Carretilla frontal",
+    "platform": "Fadecom",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
+  },
+  {
+    "id": "transpaleta-electrica",
+    "title": "Transpaleta eléctrica",
+    "platform": "Fadecom",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
+  },
+  {
+    "id": "carretilla-lateral",
+    "title": "Carretilla lateral",
+    "platform": "Fadecom",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
+  },
+  {
+    "id": "carretilla-recoge-pedidos",
+    "title": "Carretilla Recoge Pedidos",
+    "platform": "Fadecom",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
+  },
+  {
+    "id": "carretilla-apilador",
+    "title": "Carretilla Apilador",
+    "platform": "Fadecom",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
+  },
+  {
+    "id": "manipulador-alimentos",
+    "title": "Manipulador de alimentos",
+    "platform": "Fadecom",
+    "year": "2026",
+    "color": "red",
+    "certificateUrl": ""
+  },
+  {
+    "id": "control-alergenos",
+    "title": "Control de alérgenos",
+    "platform": "Fadecom",
+    "year": "2026",
+    "color": "red",
+    "certificateUrl": ""
+  }
+]

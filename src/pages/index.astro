@@ -1,8 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import Separator from '../components/common/Separator.astro';
+
+import Menu from '../components/common/Menu.astro';
+import AboutMe from '../components/sections/AboutMe.astro';
+import Education from '../components/sections/Education.astro';
+import Experience from '../components/sections/Experience.astro';
+import Contact from '../components/sections/Contact.astro';
+import Footer from '../components/common/Footer.astro';
 ---
 
 <Layout>
-	
+	<Menu />
+
+	<AboutMe />
+	<Separator variant='full' />
+
+    <Education />
+	<Separator variant='full' />
+
+	<Experience />
+	<Separator variant='full' />
+
+	<Contact />
+
+	<Footer />
 </Layout>

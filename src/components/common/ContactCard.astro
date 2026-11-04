@@ -1,0 +1,222 @@
+---
+
+---
+
+<div id="card" class="card">
+    <div class="shapes">
+        <span class="shape green-shape" />
+        <span class="shape red-shape" />
+        <span class="shape blue-shape" />
+        <span class="shape yelow-shape" />
+    </div>
+    <div class="card-front">
+        <div class="main-info">
+            <h3 class="name">
+                <span>Núñez Curiel</span>
+                <span>Marcos</span>
+            </h3>
+            <span class="role">&lt;WEB DEVELOPER /&gt;</span>
+        </div>
+        <ul class="contact-list">
+            <li>
+                <img src="src/assets/iconos-contacto/icono-telefono.png" alt="icono-telefono">
+                <span>+34 656 64 95 16</span>
+            </li>
+            <li>
+                <img src="src/assets/iconos-contacto/icono-gmail.png" alt="icono-gmail">
+                <span>marcosnunezcuriel@gmail.com</span>
+            </li>
+            <li>
+                <img src="src/assets/iconos-contacto/icono-linkedin.png" alt="icono-gmail">
+                <span>www.linkedin.com/in/marcos-nunez-curiel</span>
+            </li>
+            <li>
+                <img src="src/assets/iconos-contacto/icono-github.png" alt="icono-github">
+                <span>https://github.com/marcosnunezcuriel</span>
+            </li>
+        </ul>
+    </div>
+    <div class="card-back">
+        <div class="back-content">
+            <span class="heading">Abierto a</span>
+            <span class="highlight red">nuevas oportunidades</span>
+            <span class="highlight yellow">colaboraciones</span>
+            <span class="highlight blue">proyectos interesantes</span>
+            <span class="highlight green">nuevos retos</span>
+        </div>
+    </div>
+</div>
+
+<style>
+
+    .card {
+        width: 440px;
+        height: 260px;
+        background-color: var(--white-text);
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    /* Formas */
+    .shape {
+        position: absolute;
+    }
+
+    .green-shape {
+        top: -60px;
+        left: -60px;
+        width: 120px;
+        height: 120px;
+        transform: rotate(45deg);
+        background-color: var(--color-green);
+    }
+
+    .red-shape {
+        top: -130px;
+        right: -130px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background-color: var(--color-red);
+    }
+
+    .blue-shape {
+        bottom: -90px;
+        left: -90px;
+        width: 180px;
+        height: 180px;
+        transform: rotate(45deg);
+        background-color: var(--color-blue);
+    }
+
+    .yelow-shape {
+        bottom: -65px;
+        right: -65px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: var(--color-yellow);
+    }
+
+    /* Cara frontal */
+    .main-info {
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        color: var(--dark-bg);
+        font-family: var(--font-montserrat);
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .role {
+        color: var(--grey-text);
+        font-style: italic;
+    }
+
+    .contact-list {
+        list-style: none;
+        position: absolute;
+        left: 150px;
+        bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
+        color: var(--dark-bg);
+        font-family: var(--font-inter);
+        font-size: 0.75rem;
+    }
+
+    .contact-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .contact-list img {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+    }
+
+    .contact-list span {
+        font-family: var(--font-inter);
+        font-size: 0.75rem;
+        font-weight: 300;
+    }
+
+    /* Cara trasera */
+    .card-back {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    .back-content {
+        position: absolute;
+        top: 75px;
+        right: 75px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-family: var(--font-inter);
+        font-size: 0.9rem;
+    }
+
+    .heading {
+        color: var(--dark-bg);
+        font-weight: 500;
+        align-self: flex-end;
+    }
+
+    .highlight {
+        font-weight: 700;
+        align-self: flex-end;
+    }
+
+    .red    { color: var(--color-red); }
+    .yellow { color: var(--color-yellow); }
+    .blue   { color: var(--color-blue); }
+    .green  { color: var(--color-green); }
+
+    /* Efecto giro */
+    .card {
+        perspective: 1000px;
+        transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+
+    .card.is-flipped {
+        transform: rotateY(180deg);
+    }
+
+    .card.is-flipped .card-front {
+        opacity: 0;
+    }
+
+    .card.is-flipped .card-back {
+        opacity: 1;
+    }
+
+</style>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const card = document.getElementById("card");
+
+        card?.addEventListener("click", () => {
+            card.classList.toggle("is-flipped");
+        });
+    });
+    
+</script>

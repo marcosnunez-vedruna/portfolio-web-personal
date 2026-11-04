@@ -1,0 +1,130 @@
+---
+---
+
+<nav class="menu">
+    <img src="src/assets/logo-mnc.png" alt="logo-mnc" class="logo" />
+
+    <ul class="sections">
+        <li><a href="#about-me" class="active">Sobre mí</a></li>
+        <li><a href="#education">Educación</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
+</nav>
+
+<style>
+
+    .menu {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 10%;
+        background-color: var(--dark-bg);
+        z-index: 1000;
+    }
+
+    .logo {
+        height: 45px;
+    }
+
+    .sections {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+    }
+
+    .sections a {
+        text-decoration: none;
+        color: var(--white-text);
+        font-family: var(--font-inter);
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .sections a:hover {
+        color: var(--color-yellow);
+        border-bottom: 2px solid var(--color-yellow);
+    }
+
+    .sections a.active {
+        border-bottom: 2px solid var(--white-text);
+    }
+
+    .sections a.active:hover {
+        border-bottom: 2px solid var(--color-yellow);
+    }
+
+</style>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll(".sections a");
+        const header = document.querySelector(".menu") as HTMLElement | null;
+
+        if (!header) return;
+
+        // Manejo del click para scroll suave
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("href");
+                if (!targetId) return;
+
+                const targetSection = document.querySelector(targetId) as HTMLElement | null;
+
+                if (targetSection) {
+                    const headerHeight = header.offsetHeight;
+                    const elementPosition = targetSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // IntersectionObserver para resaltar la sección activa
+        const observerOptions = {
+            root: null,
+            rootMargin: `-${header.offsetHeight}px 0px -50% 0px`,
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute("id");
+                    
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href") === `#${id}`) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        navLinks.forEach(link => {
+            const targetId = link.getAttribute("href");
+            if (!targetId) return;
+            
+            const section = document.querySelector(targetId);
+            if (section) {
+                observer.observe(section);
+            }
+        });
+    });
+
+</script>
